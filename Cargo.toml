@@ -11,11 +11,12 @@ crate-type = ["cdylib"]
 const-str = "=0.7.1"
 ndarray = "=0.17.1"
 rustfft = "=6.4.1"
-vapours = "=0.2.3"
-vapoursynth4-rs = "=0.4.0"
+vapours = { version = "=0.2.3", default-features = false, features = ["vsscript"] }
+vapoursynth4-rs = { version = "=0.4.0", default-features = false, features = ["vsscript"] }
 
 [patch.crates-io]
-vapoursynth4-rs = { git = "https://github.com/inflation/vapoursynth4-rs", rev = "5685213b75cef2c8ae3e49ed60c71cb7258bc1a5" }
+vapoursynth4-rs = { git = "https://github.com/dtlnor/vapoursynth4-rs", branch = "master" }
+vapours = { git = "https://github.com/dtlnor/vapours", branch = "main" }
 
 [profile.release]
 codegen-units = 1
